@@ -1,0 +1,12 @@
+# Mockup / design history — kept locally, not shipped
+style-mockups/
+/a-editorial.html
+/b-terminal.html
+/c-modern.html
+
+# Editor / OS noise
+.DS_Store
+Thumbs.db
+*.swp
+.vscode/
+.idea/

@@ -1,0 +1,222 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Vijay Sachdeva — Infrastructure Strategy & Data/AI</title>
+<meta name="description" content="Infrastructure strategy and data/AI leader. 19 years operating where capital, capacity, and code meet — most recently at Meta's Network Infrastructure team.">
+<meta name="author" content="Vijay Sachdeva">
+<meta name="theme-color" content="#faf8f3">
+<link rel="canonical" href="https://sachdeva.me/">
+
+<!-- Open Graph (LinkedIn, Facebook, Slack) -->
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://sachdeva.me/">
+<meta property="og:title" content="Vijay Sachdeva — Infrastructure Strategy & Data/AI">
+<meta property="og:description" content="19 years operating where capital, capacity, and code meet. Most recently at Meta's Network Infrastructure team.">
+<meta property="og:image" content="https://sachdeva.me/photo.jpg">
+<meta property="og:image:width" content="800">
+<meta property="og:image:height" content="800">
+
+<!-- Twitter Card -->
+<meta name="twitter:card" content="summary">
+<meta name="twitter:title" content="Vijay Sachdeva — Infrastructure Strategy & Data/AI">
+<meta name="twitter:description" content="19 years operating where capital, capacity, and code meet. Most recently at Meta's Network Infrastructure team.">
+<meta name="twitter:image" content="https://sachdeva.me/photo.jpg">
+
+<!-- Favicon: inline SVG monogram, matches the editorial palette -->
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23faf8f3'/><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-weight='700' font-size='34' fill='%230a1628'>V</text></svg>">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  :root{
+    --ink:#0a1628;
+    --ink-soft:#33415c;
+    --paper:#faf8f3;
+    --paper-2:#f3efe6;
+    --rule:#d8d2c4;
+    --accent:#9a6a14;
+    --link:#1d3557;
+  }
+  *{box-sizing:border-box}
+  html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
+  ::selection{background:#0a1628;color:#faf8f3}
+  a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(29,53,87,.25);transition:border-color .15s ease}
+  a:hover{border-color:var(--link)}
+  .wrap{max-width:720px;margin:0 auto;padding:80px 32px 120px}
+
+  /* Masthead */
+  .mast{border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:48px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:Inter,system-ui,sans-serif}
+  .mast .brand{display:flex;align-items:center;gap:14px}
+  .mast .avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--rule);display:block}
+  .mast .marque{font-family:"Source Serif 4",serif;font-weight:700;font-size:17px;letter-spacing:.01em}
+  .mast .contact{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+  .mast .contact a{color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:2px;font-weight:600}
+  .mast .contact a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+  .mast .contact .sep{color:var(--rule)}
+
+  /* Hero portrait — magazine-profile feel */
+  .hero-flex{display:grid;grid-template-columns:1fr 200px;gap:36px;align-items:start;margin-bottom:0}
+  .hero-flex .portrait{width:200px;height:200px;border-radius:4px;object-fit:cover;display:block;filter:saturate(.92)}
+  .hero-flex .portrait-cap{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;font-weight:600}
+
+  /* Hero */
+  h1{font-family:"Source Serif 4",serif;font-weight:700;font-size:64px;line-height:1.05;letter-spacing:-.02em;margin:8px 0 22px;color:var(--ink)}
+  .deck{font-size:22px;line-height:1.45;color:var(--ink-soft);max-width:620px;font-weight:400;margin:0 0 28px}
+  .byline{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
+  .lede-rule{width:48px;height:2px;background:var(--accent);margin:36px 0 56px}
+
+  /* Sections */
+  section{margin:0 0 64px}
+  h2{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--ink);margin:0 0 24px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  h3{font-family:"Source Serif 4",serif;font-size:24px;line-height:1.25;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
+  .role-meta{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .role-meta .org{font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
+
+  p{margin:0 0 16px}
+  .summary{font-size:20px;line-height:1.55;color:var(--ink)}
+  .summary::first-letter{font-family:"Source Serif 4",serif;font-size:64px;float:left;line-height:.85;padding:8px 12px 0 0;color:var(--accent);font-weight:700}
+
+  /* Experience entries */
+  .role{padding:28px 0;border-top:1px solid var(--rule)}
+  .role:first-of-type{border-top:0;padding-top:0}
+  .bullets{list-style:none;padding:0;margin:14px 0 0}
+  .bullets li{padding:14px 0 14px 24px;position:relative;border-top:1px dotted var(--rule)}
+  .bullets li:first-child{border-top:0}
+  .bullets li::before{content:"§";position:absolute;left:0;top:14px;color:var(--accent);font-weight:700}
+  .bullets strong{font-weight:600;color:var(--ink)}
+
+  /* Featured project card */
+  .feature{background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);padding:28px 28px 24px;margin:8px 0 0;position:relative}
+  .feature .label{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
+  .feature h3{margin-bottom:10px}
+  .feature p{font-size:17px;color:var(--ink-soft);margin-bottom:14px}
+  .feature .stats{display:flex;gap:32px;margin-top:18px;padding-top:18px;border-top:1px solid var(--rule);font-family:Inter,sans-serif}
+  .feature .stat .n{font-family:"Source Serif 4",serif;font-size:26px;font-weight:700;color:var(--ink);display:block;line-height:1}
+  .feature .stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;display:block}
+
+  /* Skills */
+  .skills{display:grid;grid-template-columns:140px 1fr;gap:14px 24px;font-family:Inter,sans-serif;font-size:14px}
+  .skills dt{font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:11px;padding-top:2px}
+  .skills dd{margin:0;color:var(--ink-soft);line-height:1.6}
+
+  /* Footer */
+  footer{margin-top:96px;padding-top:24px;border-top:1px solid var(--ink);font-family:Inter,sans-serif;font-size:13px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+  footer a{color:var(--ink);border-bottom-color:rgba(10,22,40,.25)}
+
+  @media (max-width:640px){
+    .wrap{padding:48px 22px 80px}
+    h1{font-size:42px}
+    .deck{font-size:18px}
+    .skills{grid-template-columns:1fr}
+    .feature .stats{flex-wrap:wrap;gap:18px}
+    .hero-flex{grid-template-columns:1fr;gap:24px}
+    .hero-flex .portrait-wrap{order:-1;display:flex;flex-direction:column;align-items:flex-start}
+    .hero-flex .portrait{width:140px;height:140px}
+    .hero-flex .portrait-cap{text-align:left;margin-top:8px}
+  }
+</style>
+</head>
+<body>
+<div class="wrap">
+
+  <header class="mast">
+    <div class="brand">
+      <img class="avatar" src="photo.jpg" alt="Vijay Sachdeva">
+      <div class="marque">Vijay Sachdeva</div>
+    </div>
+    <nav class="contact">
+      <a href="mailto:vijaysachdeva@gmail.com">Email</a>
+      <span class="sep">·</span>
+      <a href="https://linkedin.com/in/vijay-sachdeva/" target="_blank" rel="noopener">LinkedIn</a>
+      <span class="sep">·</span>
+      <a href="https://github.com/vijay-sachdeva" target="_blank" rel="noopener">GitHub</a>
+      <span class="sep">·</span>
+      <a href="vijay-sachdeva-resume.pdf" target="_blank" rel="noopener">Résumé</a>
+    </nav>
+  </header>
+
+  <div class="hero-flex">
+    <div>
+      <div class="byline">Infrastructure Strategy · Data &amp; AI</div>
+      <h1>Building the systems that move the buildout.</h1>
+      <p class="deck">Nineteen years operating where capital, capacity, and code meet — most recently shaping how Meta plans, audits, and accelerates the physical layer of the AI boom.</p>
+    </div>
+    <div class="portrait-wrap">
+      <img class="portrait" src="photo.jpg" alt="Portrait of Vijay Sachdeva">
+      <div class="portrait-cap">SF Bay Area · 2026</div>
+    </div>
+  </div>
+  <div class="lede-rule"></div>
+
+  <section>
+    <h2>About</h2>
+    <p class="summary">Infrastructure strategy and analytics leader specializing in scaling capacity, optimizing multi-million-dollar footprints, and driving automation for global fiber and data-center networks. I translate fragmented data into high-stakes strategic insight for VP-level stakeholders, and build the autonomous pipelines that compress time-to-capacity.</p>
+  </section>
+
+  <section>
+    <h2>Featured Work</h2>
+    <div class="feature">
+      <div class="label">Independent project · 2026</div>
+      <h3>US AI Infrastructure Monitor</h3>
+      <p>A single-page dashboard tracking the US data-center buildout — power demand, capex, capacity, costs, geography, and the bottlenecks holding the rollout back. Self-refreshing daily from a scheduled agent pipeline.</p>
+      <p style="font-size:15px"><a href="https://vijay-sachdeva.github.io/us-ai-infra/" target="_blank" rel="noopener">View the live dashboard →</a></p>
+      <div class="stats">
+        <div class="stat"><span class="n">41 GW</span><span class="l">US DC demand tracked</span></div>
+        <div class="stat"><span class="n">6</span><span class="l">Hyperscalers covered</span></div>
+        <div class="stat"><span class="n">Daily</span><span class="l">Auto-refresh cadence</span></div>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Experience</h2>
+
+    <div class="role">
+      <div class="role-meta"><span class="org">Meta · Network Infrastructure</span><span>2018 — 2026</span></div>
+      <h3>Data &amp; Analytics Manager · Strategy Manager</h3>
+      <ul class="bullets">
+        <li><strong>Strategic vendor operations.</strong> Accelerated Meta's largest US backbone partnership to 105% of delivery targets within six months — built an end-to-end automation platform that synchronized real-time vendor updates with internal inventory and surfaced anomalies before they became blockers. Resolved a 70% capacity-delivery bottleneck that had no existing tooling.</li>
+        <li><strong>Infrastructure asset recovery.</strong> Eliminated $43M in annualized overhead by writing custom auditing code that surfaced unindexed physical infrastructure across Meta's global data-center network — uncovered 900 mislabeled ILA sites (33% of total backbone inventory) invisible to standard systems, recovering capacity that bypassed 12+ months of procurement lead time critical to the AI buildout.</li>
+        <li><strong>AI data governance &amp; evals.</strong> Scaled AI query accuracy from 30% to 85% across Meta's internal assistant (MetaMate) and external coding engines (Claude Code) by re-architecting data tables with semantic metadata and engineering continuous evaluation frameworks — now Net Infra's reference model for validating AI pilots before rollout.</li>
+        <li><strong>Global subsea strategy.</strong> Unlocked 4G access for 200M people across Africa by engineering a value-exchange consortium model for the $1B 2Africa subsea cable — structured co-investment deals with Airtel, Vodacom, and MTN that traded lower subsea unit costs for terrestrial infrastructure expansion, preventing a regional capacity crunch before it materialized.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-meta"><span class="org">inCode Consulting (Ericsson)</span><span>2013 — 2018</span></div>
+      <h3>Consulting Manager · Senior Consultant</h3>
+      <ul class="bullets">
+        <li><strong>Telecom spectrum valuation.</strong> Equipped Reliance with the pricing intelligence to bid competitively in India's 2015 4G spectrum auction by building market-demand and valuation models that benchmarked spectrum value across diverse regional markets.</li>
+        <li><strong>Infrastructure modernization.</strong> Freed premium 2.5 GHz spectrum for high-capacity 4G/5G rollout by leading Northeast US PMO engineering operations to decommission 27,000 legacy Sprint iDEN cell sites.</li>
+      </ul>
+    </div>
+
+    <div class="role">
+      <div class="role-meta"><span class="org">Meritech</span><span>2005 — 2011</span></div>
+      <h3>Software Engineer</h3>
+      <ul class="bullets">
+        <li><strong>Network diagnostics engineering.</strong> Enabled one of the world's first commercial 4G launches by leading development of the Sigma product portfolio — the trusted network-validation tooling that NTT Docomo's nationwide deployment had previously lacked.</li>
+      </ul>
+    </div>
+  </section>
+
+  <section>
+    <h2>Skills</h2>
+    <dl class="skills">
+      <dt>Infrastructure</dt><dd>Capacity planning · CapEx/OpEx optimization · Routing &amp; telemetry</dd>
+      <dt>AI &amp; Data</dt><dd>Agentic workflows (Claude Code, Codex) · AI evals · Automated pipelines · ETL</dd>
+      <dt>Education</dt><dd>MBA, Strategy &amp; Operations — Purdue University · B.Tech, IT — Kurukshetra University</dd>
+    </dl>
+  </section>
+
+  <footer>
+    <div>© 2026 Vijay Sachdeva · San Francisco Bay Area</div>
+    <div>Built by hand · sachdeva.me</div>
+  </footer>
+
+</div>
+</body>
+</html>
