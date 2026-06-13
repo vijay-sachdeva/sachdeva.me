@@ -3,119 +3,157 @@
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Vijay Sachdeva — Infrastructure Strategy & Data/AI</title>
-<meta name="description" content="Infrastructure strategy and data/AI leader. 19 years operating where capital, capacity, and code meet — most recently at Meta's Network Infrastructure team.">
+<title>Vijay Sachdeva &mdash; AI Infrastructure, Data Systems, Strategy</title>
+<meta name="description" content="Vijay Sachdeva builds decision systems for the physical AI economy: infrastructure strategy, data systems, AI evals, and automation across global networks and data centers.">
 <meta name="author" content="Vijay Sachdeva">
-<meta name="theme-color" content="#faf8f3">
+<meta name="theme-color" content="#fbfaf7">
 <link rel="canonical" href="https://sachdeva.me/">
 
 <!-- Open Graph (LinkedIn, Facebook, Slack) -->
 <meta property="og:type" content="website">
 <meta property="og:url" content="https://sachdeva.me/">
-<meta property="og:title" content="Vijay Sachdeva — Infrastructure Strategy & Data/AI">
-<meta property="og:description" content="19 years operating where capital, capacity, and code meet. Most recently at Meta's Network Infrastructure team.">
+<meta property="og:title" content="Vijay Sachdeva &mdash; AI Infrastructure, Data Systems, Strategy">
+<meta property="og:description" content="I build decision systems for the physical AI economy: infrastructure, data, and AI-native automation.">
 <meta property="og:image" content="https://sachdeva.me/photo.jpg">
 <meta property="og:image:width" content="800">
 <meta property="og:image:height" content="800">
 
 <!-- Twitter Card -->
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="Vijay Sachdeva — Infrastructure Strategy & Data/AI">
-<meta name="twitter:description" content="19 years operating where capital, capacity, and code meet. Most recently at Meta's Network Infrastructure team.">
+<meta name="twitter:title" content="Vijay Sachdeva &mdash; AI Infrastructure, Data Systems, Strategy">
+<meta name="twitter:description" content="I build decision systems for the physical AI economy: infrastructure, data, and AI-native automation.">
 <meta name="twitter:image" content="https://sachdeva.me/photo.jpg">
 
 <!-- Favicon: inline SVG monogram, matches the editorial palette -->
-<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23faf8f3'/><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-weight='700' font-size='34' fill='%230a1628'>V</text></svg>">
+<link rel="icon" type="image/svg+xml" href="data:image/svg+xml;utf8,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'><rect width='64' height='64' rx='10' fill='%23fbfaf7'/><text x='50%25' y='50%25' text-anchor='middle' dominant-baseline='central' font-family='Georgia,serif' font-weight='700' font-size='34' fill='%23091827'>V</text></svg>">
 
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Source+Serif+4:opsz,wght@8..60,400;8..60,600;8..60,700&family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
 <style>
   :root{
-    --ink:#0a1628;
-    --ink-soft:#33415c;
-    --paper:#faf8f3;
-    --paper-2:#f3efe6;
-    --rule:#d8d2c4;
-    --accent:#9a6a14;
-    --link:#1d3557;
+    --ink:#091827;
+    --ink-soft:#39485f;
+    --muted:#66758a;
+    --paper:#fbfaf7;
+    --surface:#ffffff;
+    --surface-blue:#eef5f8;
+    --surface-green:#eff6f1;
+    --rule:#d9dfe3;
+    --accent:#b06f18;
+    --accent-2:#2d7c78;
+    --link:#174c7c;
   }
   *{box-sizing:border-box}
   html,body{margin:0;padding:0;background:var(--paper);color:var(--ink);font-family:"Source Serif 4",Georgia,serif;font-size:18px;line-height:1.55;-webkit-font-smoothing:antialiased}
-  ::selection{background:#0a1628;color:#faf8f3}
-  a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(29,53,87,.25);transition:border-color .15s ease}
-  a:hover{border-color:var(--link)}
-  .wrap{max-width:720px;margin:0 auto;padding:80px 32px 120px}
+  ::selection{background:var(--ink);color:var(--paper)}
+  a{color:var(--link);text-decoration:none;border-bottom:1px solid rgba(23,76,124,.28);transition:border-color .15s ease,color .15s ease}
+  a:hover{border-color:var(--accent-2);color:var(--accent-2)}
+  .wrap{max-width:820px;margin:0 auto;padding:56px 32px 112px}
 
-  /* Masthead */
-  .mast{border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:48px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:Inter,system-ui,sans-serif}
+  .mast{border-bottom:1px solid var(--ink);padding-bottom:18px;margin-bottom:38px;display:flex;justify-content:space-between;align-items:center;gap:16px;flex-wrap:wrap;font-family:Inter,system-ui,sans-serif}
   .mast .brand{display:flex;align-items:center;gap:14px}
   .mast .avatar{width:48px;height:48px;border-radius:50%;object-fit:cover;border:1px solid var(--rule);display:block}
-  .mast .marque{font-family:"Source Serif 4",serif;font-weight:700;font-size:17px;letter-spacing:.01em}
-  .mast .contact{font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
-  .mast .contact a{color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:2px;font-weight:600}
-  .mast .contact a:hover{border-bottom-color:var(--accent);color:var(--accent)}
+  .mast .marque{font-family:"Source Serif 4",serif;font-weight:700;font-size:17px;letter-spacing:0}
+  .mast .contact{font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--ink-soft);display:flex;gap:18px;align-items:baseline;flex-wrap:wrap}
+  .mast .contact a{color:var(--ink);border-bottom:1px solid var(--rule);padding-bottom:2px;font-weight:700}
+  .mast .contact a:hover{border-bottom-color:var(--accent-2);color:var(--accent-2)}
   .mast .contact .sep{color:var(--rule)}
 
-  /* Hero portrait — magazine-profile feel */
-  .hero-flex{display:grid;grid-template-columns:1fr 200px;gap:36px;align-items:start;margin-bottom:0}
-  .hero-flex .portrait{width:200px;height:200px;border-radius:4px;object-fit:cover;display:block;filter:saturate(.92)}
-  .hero-flex .portrait-cap{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;font-weight:600}
+  .hero-flex{display:grid;grid-template-columns:1fr 190px;gap:36px;align-items:start}
+  .portrait{width:190px;height:190px;border-radius:4px;object-fit:cover;display:block;filter:saturate(.94)}
+  .portrait-cap{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:10px;text-align:center;font-weight:700}
 
-  /* Hero */
-  h1{font-family:"Source Serif 4",serif;font-weight:700;font-size:64px;line-height:1.05;letter-spacing:-.02em;margin:8px 0 22px;color:var(--ink)}
-  .deck{font-size:22px;line-height:1.45;color:var(--ink-soft);max-width:620px;font-weight:400;margin:0 0 28px}
-  .byline{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:4px}
-  .lede-rule{width:48px;height:2px;background:var(--accent);margin:36px 0 56px}
+  h1{font-family:"Source Serif 4",serif;font-weight:700;font-size:52px;line-height:1.05;letter-spacing:0;margin:8px 0 20px;color:var(--ink)}
+  .deck{font-size:21px;line-height:1.45;color:var(--ink-soft);max-width:640px;font-weight:400;margin:0 0 20px}
+  .hero-note{font-family:Inter,sans-serif;font-size:13px;line-height:1.6;color:var(--muted);max-width:620px;margin:0}
+  .byline{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:4px}
+  .lede-rule{width:56px;height:2px;background:linear-gradient(90deg,var(--accent),var(--accent-2));margin:28px 0 42px}
 
-  /* Sections */
-  section{margin:0 0 64px}
-  h2{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:600;color:var(--ink);margin:0 0 24px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
-  h3{font-family:"Source Serif 4",serif;font-size:24px;line-height:1.25;margin:0 0 4px;font-weight:600;letter-spacing:-.01em}
-  .role-meta{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
-  .role-meta .org{font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
-
+  section{margin:0 0 68px}
+  h2{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.22em;text-transform:uppercase;font-weight:700;color:var(--ink);margin:0 0 24px;padding-bottom:10px;border-bottom:1px solid var(--rule)}
+  h3{font-family:"Source Serif 4",serif;font-size:24px;line-height:1.25;margin:0 0 8px;font-weight:600;letter-spacing:0}
   p{margin:0 0 16px}
-  .summary{font-size:20px;line-height:1.55;color:var(--ink)}
+  .section-intro{font-size:19px;line-height:1.55;color:var(--ink-soft);max-width:720px;margin-bottom:24px}
+  .summary{font-size:20px;line-height:1.58;color:var(--ink)}
   .summary::first-letter{font-family:"Source Serif 4",serif;font-size:64px;float:left;line-height:.85;padding:8px 12px 0 0;color:var(--accent);font-weight:700}
 
-  /* Experience entries */
+  .impact-grid{display:grid;grid-template-columns:repeat(5,1fr);gap:10px}
+  .impact-card{background:var(--surface);border:1px solid var(--rule);border-top:3px solid var(--accent-2);padding:16px 14px 15px;min-height:152px}
+  .impact-card:nth-child(even){border-top-color:var(--accent)}
+  .impact-card .n{font-family:"Source Serif 4",serif;font-size:28px;font-weight:700;line-height:1;color:var(--ink);display:block;margin-bottom:10px}
+  .impact-card .l{font-family:Inter,sans-serif;font-size:12px;line-height:1.45;color:var(--ink-soft);display:block}
+
+  .triad{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:8px}
+  .triad article{background:var(--surface);border:1px solid var(--rule);padding:22px 20px 20px;min-height:222px}
+  .triad article:nth-child(2){background:var(--surface-blue)}
+  .triad article:nth-child(3){background:var(--surface-green)}
+  .triad .kicker{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:20px;display:block}
+  .triad p{font-size:16px;color:var(--ink-soft);line-height:1.55;margin:0}
+  .throughline{font-size:21px;line-height:1.4;color:var(--ink);margin:24px 0 0;padding-left:18px;border-left:3px solid var(--accent-2)}
+
+  .feature{background:var(--surface);border:1px solid var(--rule);border-left:3px solid var(--accent);padding:30px 30px 26px;margin:8px 0 0;position:relative}
+  .feature .label{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:700;margin-bottom:10px}
+  .feature h3{margin-bottom:10px}
+  .feature p{font-size:17px;color:var(--ink-soft);margin-bottom:14px}
+  .feature .feature-link{font-family:Inter,sans-serif;font-size:14px;font-weight:700;margin-top:4px}
+  .feature .stats{display:flex;gap:32px;margin-top:20px;padding-top:18px;border-top:1px solid var(--rule);font-family:Inter,sans-serif}
+  .feature .stat .n{font-family:"Source Serif 4",serif;font-size:26px;font-weight:700;color:var(--ink);display:block;line-height:1}
+  .feature .stat .l{font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;display:block}
+
+  .beliefs{list-style:none;padding:0;margin:0;display:grid;gap:12px}
+  .beliefs li{background:var(--surface);border-left:3px solid var(--accent-2);padding:16px 18px;font-size:18px;line-height:1.5;color:var(--ink-soft)}
+  .beliefs strong{color:var(--ink);font-weight:600}
+
+  .timeline{display:grid;gap:0;border-top:1px solid var(--rule)}
+  .timeline-item{display:grid;grid-template-columns:150px 1fr;gap:24px;padding:20px 0;border-bottom:1px solid var(--rule)}
+  .timeline-item .era{font-family:Inter,sans-serif;font-size:11px;letter-spacing:.16em;text-transform:uppercase;color:var(--accent);font-weight:700;padding-top:4px}
+  .timeline-item p{margin:0;color:var(--ink-soft);font-size:17px}
+  .timeline-item strong{color:var(--ink);font-weight:600}
+
   .role{padding:28px 0;border-top:1px solid var(--rule)}
   .role:first-of-type{border-top:0;padding-top:0}
+  .role-meta{font-family:Inter,sans-serif;font-size:13px;letter-spacing:.04em;color:var(--ink-soft);margin-bottom:18px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:8px}
+  .role-meta .org{font-weight:700;color:var(--ink);text-transform:uppercase;letter-spacing:.12em;font-size:11px}
   .bullets{list-style:none;padding:0;margin:14px 0 0}
   .bullets li{padding:14px 0 14px 24px;position:relative;border-top:1px dotted var(--rule)}
   .bullets li:first-child{border-top:0}
-  .bullets li::before{content:"§";position:absolute;left:0;top:14px;color:var(--accent);font-weight:700}
+  .bullets li::before{content:"";position:absolute;left:2px;top:23px;width:7px;height:7px;border-radius:50%;background:var(--accent-2)}
   .bullets strong{font-weight:600;color:var(--ink)}
 
-  /* Featured project card */
-  .feature{background:var(--paper-2);border:1px solid var(--rule);border-left:3px solid var(--accent);padding:28px 28px 24px;margin:8px 0 0;position:relative}
-  .feature .label{font-family:Inter,sans-serif;font-size:10px;letter-spacing:.22em;text-transform:uppercase;color:var(--accent);font-weight:600;margin-bottom:10px}
-  .feature h3{margin-bottom:10px}
-  .feature p{font-size:17px;color:var(--ink-soft);margin-bottom:14px}
-  .feature .stats{display:flex;gap:32px;margin-top:18px;padding-top:18px;border-top:1px solid var(--rule);font-family:Inter,sans-serif}
-  .feature .stat .n{font-family:"Source Serif 4",serif;font-size:26px;font-weight:700;color:var(--ink);display:block;line-height:1}
-  .feature .stat .l{font-size:11px;letter-spacing:.14em;text-transform:uppercase;color:var(--ink-soft);margin-top:6px;display:block}
+  .capabilities{display:grid;grid-template-columns:repeat(2,1fr);gap:14px}
+  .capability{background:var(--surface);border:1px solid var(--rule);padding:20px}
+  .capability:last-child{grid-column:1 / -1}
+  .capability h3{font-family:Inter,sans-serif;font-size:12px;letter-spacing:.12em;text-transform:uppercase;font-weight:700;margin:0 0 10px;color:var(--ink)}
+  .capability p{font-family:Inter,sans-serif;font-size:14px;line-height:1.6;color:var(--ink-soft);margin:0}
 
-  /* Skills */
-  .skills{display:grid;grid-template-columns:140px 1fr;gap:14px 24px;font-family:Inter,sans-serif;font-size:14px}
-  .skills dt{font-weight:600;color:var(--ink);text-transform:uppercase;letter-spacing:.1em;font-size:11px;padding-top:2px}
-  .skills dd{margin:0;color:var(--ink-soft);line-height:1.6}
-
-  /* Footer */
   footer{margin-top:96px;padding-top:24px;border-top:1px solid var(--ink);font-family:Inter,sans-serif;font-size:13px;color:var(--ink-soft);display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
-  footer a{color:var(--ink);border-bottom-color:rgba(10,22,40,.25)}
+  footer a{color:var(--ink);border-bottom-color:rgba(9,24,39,.25)}
+
+  @media (max-width:780px){
+    .impact-grid{grid-template-columns:repeat(2,1fr)}
+    .impact-card:last-child{grid-column:1 / -1;min-height:auto}
+    .triad{grid-template-columns:1fr}
+    .triad article{min-height:auto}
+    .capabilities{grid-template-columns:1fr}
+  }
 
   @media (max-width:640px){
-    .wrap{padding:48px 22px 80px}
-    h1{font-size:42px}
-    .deck{font-size:18px}
-    .skills{grid-template-columns:1fr}
-    .feature .stats{flex-wrap:wrap;gap:18px}
+    .wrap{padding:34px 22px 80px}
+    .mast{margin-bottom:28px}
+    h1{font-size:36px}
+    .deck{font-size:17px}
+    .hero-note{display:none}
+    .lede-rule{margin:22px 0 36px}
     .hero-flex{grid-template-columns:1fr;gap:24px}
-    .hero-flex .portrait-wrap{order:-1;display:flex;flex-direction:column;align-items:flex-start}
-    .hero-flex .portrait{width:140px;height:140px}
-    .hero-flex .portrait-cap{text-align:left;margin-top:8px}
+    .portrait-wrap{order:-1;display:flex;flex-direction:column;align-items:flex-start}
+    .portrait{width:112px;height:112px}
+    .portrait-cap{text-align:left;margin-top:8px}
+    .feature{padding:24px 22px 22px}
+    .feature .stats{flex-wrap:wrap;gap:18px}
+    .timeline-item{grid-template-columns:1fr;gap:6px}
+    .impact-grid{grid-template-columns:1fr}
+    .impact-card{min-height:auto}
   }
 </style>
 </head>
@@ -129,40 +167,75 @@
     </div>
     <nav class="contact">
       <a href="mailto:vijaysachdeva@gmail.com">Email</a>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <a href="https://linkedin.com/in/vijay-sachdeva/" target="_blank" rel="noopener">LinkedIn</a>
-      <span class="sep">·</span>
+      <span class="sep">&middot;</span>
       <a href="https://github.com/vijay-sachdeva" target="_blank" rel="noopener">GitHub</a>
-      <span class="sep">·</span>
-      <a href="vijay-sachdeva-resume.pdf" target="_blank" rel="noopener">Résumé</a>
+      <span class="sep">&middot;</span>
+      <a href="vijay-sachdeva-resume.pdf" target="_blank" rel="noopener">R&eacute;sum&eacute;</a>
     </nav>
   </header>
 
   <div class="hero-flex">
     <div>
-      <div class="byline">Infrastructure Strategy · Data &amp; AI</div>
-      <h1>Building the systems that move the buildout.</h1>
-      <p class="deck">Nineteen years operating where capital, capacity, and code meet — most recently shaping how Meta plans, audits, and accelerates the physical layer of the AI boom.</p>
+      <div class="byline">Infrastructure &middot; Data &middot; AI</div>
+      <h1>I build decision systems for the physical AI economy.</h1>
+      <p class="deck">The AI boom is becoming a capital, capacity, and power problem. I connect the physical infrastructure layer to trusted data systems and AI-native workflows so leaders can see constraints earlier and move faster.</p>
+      <p class="hero-note">Nineteen years operating where code, networks, data centers, vendors, and capital planning meet, most recently shaping how Meta plans, audits, and accelerates the infrastructure underneath AI.</p>
     </div>
     <div class="portrait-wrap">
       <img class="portrait" src="photo.jpg" alt="Portrait of Vijay Sachdeva">
-      <div class="portrait-cap">SF Bay Area · 2026</div>
+      <div class="portrait-cap">SF Bay Area &middot; 2026</div>
     </div>
   </div>
   <div class="lede-rule"></div>
 
   <section>
+    <h2>Impact at Scale</h2>
+    <div class="impact-grid">
+      <div class="impact-card"><span class="n">$43M</span><span class="l">Annualized overhead eliminated through infrastructure audit automation.</span></div>
+      <div class="impact-card"><span class="n">900</span><span class="l">Mislabeled infrastructure sites recovered into usable inventory.</span></div>
+      <div class="impact-card"><span class="n">105%</span><span class="l">Delivery target achieved on Meta's largest US backbone partnership.</span></div>
+      <div class="impact-card"><span class="n">30% &rarr; 85%</span><span class="l">AI query accuracy lift through semantic data and eval frameworks.</span></div>
+      <div class="impact-card"><span class="n">200M</span><span class="l">People enabled for 4G access through subsea strategy work.</span></div>
+    </div>
+  </section>
+
+  <section>
     <h2>About</h2>
-    <p class="summary">Infrastructure strategy and analytics leader specializing in scaling capacity, optimizing multi-million-dollar footprints, and driving automation for global fiber and data-center networks. I translate fragmented data into high-stakes strategic insight for VP-level stakeholders, and build the autonomous pipelines that compress time-to-capacity.</p>
+    <p class="summary">My work sits in the handoff between physical systems and decision systems: fiber routes, data centers, asset inventory, vendor delivery, power constraints, semantic data layers, and AI evaluation loops. I turn fragmented operational reality into trusted models, executive insight, and automation that compresses time-to-capacity.</p>
+  </section>
+
+  <section>
+    <h2>Where I Work</h2>
+    <div class="triad">
+      <article>
+        <span class="kicker">01</span>
+        <h3>Infrastructure</h3>
+        <p>Capacity planning, network infrastructure, data-center footprints, subsea economics, vendor operations, and the constraints that decide how fast systems can actually be built.</p>
+      </article>
+      <article>
+        <span class="kicker">02</span>
+        <h3>Data</h3>
+        <p>Audit pipelines, telemetry, inventory truth, market models, semantic metadata, and decision surfaces that make messy physical systems legible to operators and executives.</p>
+      </article>
+      <article>
+        <span class="kicker">03</span>
+        <h3>AI</h3>
+        <p>Agentic workflows, AI evals, table design, and automated refresh systems that turn trusted data into repeatable decisions instead of one-off analysis.</p>
+      </article>
+    </div>
+    <p class="throughline">Physical systems create messy signals. Data makes them legible. AI makes them actionable.</p>
   </section>
 
   <section>
     <h2>Featured Work</h2>
     <div class="feature">
-      <div class="label">Independent project · 2026</div>
+      <div class="label">Independent project &middot; 2026</div>
       <h3>US AI Infrastructure Monitor</h3>
-      <p>A single-page dashboard tracking the US data-center buildout — power demand, capex, capacity, costs, geography, and the bottlenecks holding the rollout back. Self-refreshing daily from a scheduled agent pipeline.</p>
-      <p style="font-size:15px"><a href="https://vijay-sachdeva.github.io/us-ai-infra/" target="_blank" rel="noopener">View the live dashboard →</a></p>
+      <p>A live model of the AI infrastructure economy: capex, power, capacity, geography, bottlenecks, and token demand in one decision surface. It refreshes daily from a scheduled agent pipeline.</p>
+      <p>I built it because AI is increasingly constrained by real-world infrastructure: megawatts, interconnection queues, supply chains, fiber, and capital timing. The monitor shows how I think: combine fragmented public data, infrastructure judgment, and automation into a strategic view people can use.</p>
+      <p class="feature-link"><a href="https://vijay-sachdeva.github.io/us-ai-infra/" target="_blank" rel="noopener">View the live dashboard &rarr;</a></p>
       <div class="stats">
         <div class="stat"><span class="n">41 GW</span><span class="l">US DC demand tracked</span></div>
         <div class="stat"><span class="n">6</span><span class="l">Hyperscalers covered</span></div>
@@ -172,22 +245,54 @@
   </section>
 
   <section>
-    <h2>Experience</h2>
+    <h2>Point of View</h2>
+    <ul class="beliefs">
+      <li><strong>AI infrastructure is no longer just chips and models.</strong> It is power, fiber, land, cooling, logistics, interconnection timing, and capital allocation.</li>
+      <li><strong>The bottleneck is often not lack of data.</strong> It is lack of trusted operational context that connects messy field reality to leadership decisions.</li>
+      <li><strong>The winning teams will connect physical infrastructure data to AI-native decision loops.</strong> That is where I like to work.</li>
+    </ul>
+  </section>
+
+  <section>
+    <h2>Career Throughline</h2>
+    <p class="section-intro">From network software to telecom strategy to AI infrastructure systems, the throughline has been the same: make complex buildouts measurable enough to act on.</p>
+    <div class="timeline">
+      <div class="timeline-item">
+        <div class="era">Software</div>
+        <p><strong>Built network diagnostic tooling</strong> for early commercial 4G deployments, where reliability depended on turning protocol-level behavior into usable operator insight.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="era">Strategy</div>
+        <p><strong>Modeled telecom markets and modernization programs</strong> across spectrum, cell-site decommissioning, and subsea expansion.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="era">Infrastructure</div>
+        <p><strong>Scaled Meta backbone and data-center infrastructure workflows</strong> across capacity delivery, vendor operations, inventory recovery, and network planning.</p>
+      </div>
+      <div class="timeline-item">
+        <div class="era">AI Systems</div>
+        <p><strong>Designed semantic data layers, evals, and agentic workflows</strong> that help infrastructure teams use AI against trusted operational data.</p>
+      </div>
+    </div>
+  </section>
+
+  <section>
+    <h2>Selected Experience</h2>
 
     <div class="role">
-      <div class="role-meta"><span class="org">Meta · Network Infrastructure</span><span>2018 — 2026</span></div>
-      <h3>Data &amp; Analytics Manager · Strategy Manager</h3>
+      <div class="role-meta"><span class="org">Meta &middot; Network Infrastructure</span><span>2018 &mdash; 2026</span></div>
+      <h3>Data &amp; Analytics Manager &middot; Strategy Manager</h3>
       <ul class="bullets">
-        <li><strong>Strategic vendor operations.</strong> Accelerated Meta's largest US backbone partnership to 105% of delivery targets within six months — built an end-to-end automation platform that synchronized real-time vendor updates with internal inventory and surfaced anomalies before they became blockers. Resolved a 70% capacity-delivery bottleneck that had no existing tooling.</li>
-        <li><strong>Infrastructure asset recovery.</strong> Eliminated $43M in annualized overhead by writing custom auditing code that surfaced unindexed physical infrastructure across Meta's global data-center network — uncovered 900 mislabeled ILA sites (33% of total backbone inventory) invisible to standard systems, recovering capacity that bypassed 12+ months of procurement lead time critical to the AI buildout.</li>
-        <li><strong>AI data governance &amp; evals.</strong> Scaled AI query accuracy from 30% to 85% across Meta's internal assistant (MetaMate) and external coding engines (Claude Code) by re-architecting data tables with semantic metadata and engineering continuous evaluation frameworks — now Net Infra's reference model for validating AI pilots before rollout.</li>
-        <li><strong>Global subsea strategy.</strong> Unlocked 4G access for 200M people across Africa by engineering a value-exchange consortium model for the $1B 2Africa subsea cable — structured co-investment deals with Airtel, Vodacom, and MTN that traded lower subsea unit costs for terrestrial infrastructure expansion, preventing a regional capacity crunch before it materialized.</li>
+        <li><strong>Strategic vendor operations.</strong> Accelerated Meta's largest US backbone partnership to 105% of delivery targets within six months by building an end-to-end automation platform that synchronized real-time vendor updates with internal inventory and surfaced anomalies before they became blockers. Resolved a 70% capacity-delivery bottleneck that had no existing tooling.</li>
+        <li><strong>Infrastructure asset recovery.</strong> Eliminated $43M in annualized overhead by writing custom auditing code that surfaced unindexed physical infrastructure across Meta's global data-center network. Uncovered 900 mislabeled ILA sites, 33% of total backbone inventory, recovering capacity that bypassed 12+ months of procurement lead time critical to the AI buildout.</li>
+        <li><strong>AI data governance &amp; evals.</strong> Scaled AI query accuracy from 30% to 85% across Meta's internal assistant, MetaMate, and external coding engines by re-architecting data tables with semantic metadata and engineering continuous evaluation frameworks. The approach became Net Infra's reference model for validating AI pilots before rollout.</li>
+        <li><strong>Global subsea strategy.</strong> Unlocked 4G access for 200M people across Africa by engineering a value-exchange consortium model for the $1B 2Africa subsea cable. Structured co-investment deals with Airtel, Vodacom, and MTN that traded lower subsea unit costs for terrestrial infrastructure expansion.</li>
       </ul>
     </div>
 
     <div class="role">
-      <div class="role-meta"><span class="org">inCode Consulting (Ericsson)</span><span>2013 — 2018</span></div>
-      <h3>Consulting Manager · Senior Consultant</h3>
+      <div class="role-meta"><span class="org">inCode Consulting (Ericsson)</span><span>2013 &mdash; 2018</span></div>
+      <h3>Consulting Manager &middot; Senior Consultant</h3>
       <ul class="bullets">
         <li><strong>Telecom spectrum valuation.</strong> Equipped Reliance with the pricing intelligence to bid competitively in India's 2015 4G spectrum auction by building market-demand and valuation models that benchmarked spectrum value across diverse regional markets.</li>
         <li><strong>Infrastructure modernization.</strong> Freed premium 2.5 GHz spectrum for high-capacity 4G/5G rollout by leading Northeast US PMO engineering operations to decommission 27,000 legacy Sprint iDEN cell sites.</li>
@@ -195,26 +300,43 @@
     </div>
 
     <div class="role">
-      <div class="role-meta"><span class="org">Meritech</span><span>2005 — 2011</span></div>
+      <div class="role-meta"><span class="org">Meritech</span><span>2005 &mdash; 2011</span></div>
       <h3>Software Engineer</h3>
       <ul class="bullets">
-        <li><strong>Network diagnostics engineering.</strong> Enabled one of the world's first commercial 4G launches by leading development of the Sigma product portfolio — the trusted network-validation tooling that NTT Docomo's nationwide deployment had previously lacked.</li>
+        <li><strong>Network diagnostics engineering.</strong> Enabled one of the world's first commercial 4G launches by leading development of the Sigma product portfolio, the trusted network-validation tooling that NTT Docomo's nationwide deployment had previously lacked.</li>
       </ul>
     </div>
   </section>
 
   <section>
-    <h2>Skills</h2>
-    <dl class="skills">
-      <dt>Infrastructure</dt><dd>Capacity planning · CapEx/OpEx optimization · Routing &amp; telemetry</dd>
-      <dt>AI &amp; Data</dt><dd>Agentic workflows (Claude Code, Codex) · AI evals · Automated pipelines · ETL</dd>
-      <dt>Education</dt><dd>MBA, Strategy &amp; Operations — Purdue University · B.Tech, IT — Kurukshetra University</dd>
-    </dl>
+    <h2>Operating Range</h2>
+    <div class="capabilities">
+      <div class="capability">
+        <h3>Physical Infrastructure</h3>
+        <p>Capacity planning, fiber networks, data centers, subsea systems, routing, telemetry, vendor delivery, CapEx and OpEx optimization.</p>
+      </div>
+      <div class="capability">
+        <h3>Data Systems</h3>
+        <p>ETL, audit automation, inventory truth, semantic modeling, executive dashboards, market intelligence, and operational data products.</p>
+      </div>
+      <div class="capability">
+        <h3>AI Workflows</h3>
+        <p>Agentic pipelines, AI eval frameworks, metadata design, coding agents, AI-assisted operations, and automated refresh loops.</p>
+      </div>
+      <div class="capability">
+        <h3>Strategy</h3>
+        <p>Infrastructure partnerships, valuation models, buildout constraints, vendor strategy, executive decision support, and capital planning.</p>
+      </div>
+      <div class="capability">
+        <h3>Education</h3>
+        <p>MBA, Strategy &amp; Operations, Purdue University. B.Tech, IT, Kurukshetra University.</p>
+      </div>
+    </div>
   </section>
 
   <footer>
-    <div>© 2026 Vijay Sachdeva · San Francisco Bay Area</div>
-    <div>Built by hand · sachdeva.me</div>
+    <div>&copy; 2026 Vijay Sachdeva &middot; San Francisco Bay Area</div>
+    <div>Built by hand &middot; sachdeva.me</div>
   </footer>
 
 </div>
